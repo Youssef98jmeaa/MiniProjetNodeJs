@@ -1,4 +1,3 @@
-require('dotenv').config()
 
 const httpPort = 3000;
 const express = require('express')
