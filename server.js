@@ -25,7 +25,7 @@ app.use('/uploads',express.static('uploads'))
 
 //app.use('/users/lot/search',UsersRouter)
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(httpPort, () => {
 	console.log("Server is running on port " + httpPort);
 })
 //app.listen(3000, ()=> console.log('server start'))
