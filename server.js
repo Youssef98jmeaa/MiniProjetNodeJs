@@ -1,10 +1,10 @@
-require('dotenv').config()
+
 const httpPort = 3000;
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect("mongodb://localhost:27017/users")
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
 db.once('open',()=>console.log('connected to database'))
@@ -16,7 +16,7 @@ app.use(
   );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-const UsersRouter = require('./routes/users.js')
+const UsersRouter = require('./routes/Users.js')
 
 app.use('/users',UsersRouter)
 app.use('/uploads',express.static('uploads'))
