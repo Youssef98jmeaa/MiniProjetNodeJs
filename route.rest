@@ -1,0 +1,62 @@
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/61896ecae68516b3df999434
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "username":"tyty2",
+    "password":"tyty2"
+}
+###
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "username":"abbb",
+    "password":"a"
+}
+
+### 
+DELETE  http://localhost:3000/users/618a8c9c6ac759143bfc4b35
+
+### 
+PATCH  http://localhost:3000/users/update/618b9c5756af07c3c183b526
+Content-Type: application/json
+
+{
+    "username":"tyty",
+    "password":"tyty",
+    "picture":"avatar.png"
+}
+
+
+### 
+PATCH  http://localhost:3000/users/update/picture/61a65b8cbd6efac18a123aab
+Content-Type: application/json
+
+{
+   
+    "picture":"avatar.png"
+}
+
+
+###
+POST http://localhost:3000/users/postuler
+Content-Type: application/json
+
+{
+    "localisation":"abbb",
+    "description":"abbb",
+    "picture":"avatar.png"
+}
+
+###
+POST http://localhost:3000/users/lot/search
+Content-Type: application/json
+
+{
+"hhhhhhhh"    
+}
