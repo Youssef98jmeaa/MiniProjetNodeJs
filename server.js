@@ -1,8 +1,7 @@
-
+require("dotenv")
 const httpPort = 3000;
 const express = require('express')
 const app = express()
-/*
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 mongoose.connect("mongodb+srv://youssef:0000@cluster0.fv0jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
@@ -22,12 +21,13 @@ const UsersRouter = require('./routes/Users.js')
 app.use('/users',UsersRouter)
 app.use('/uploads',express.static('uploads'))
 //app.use('/uploads',express.static(path.join(__dirname,'uploads')))
-*/
+
 
 //app.use('/users/lot/search',UsersRouter)
+const PORT = process.env.PORT || 3000;
 
-app.listen(httpPort,() => {
-	console.log("Server is running on port " + httpPort);
+app.listen(PORT, () => {
+	console.log("Server is running on port " + PORT);
 })
 //app.listen(3000, ()=> console.log('server start'))
 //skander.chamakhi
