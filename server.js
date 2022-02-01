@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 const httpPort = 3000;
 const express = require('express')
@@ -25,7 +26,7 @@ app.use('/uploads',express.static('uploads'))
 
 //app.use('/users/lot/search',UsersRouter)
 
-app.listen(httpPort, () => {
+app.listen(process.env.PORT || 5000, () => {
 	console.log("Server is running on port " + httpPort);
 })
 //app.listen(3000, ()=> console.log('server start'))
