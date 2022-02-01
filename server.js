@@ -1,4 +1,5 @@
-const httpPort = 3000;
+require('dotenv').config()
+const httpPort = process.env.PORT | 3000;
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser')
@@ -15,7 +16,7 @@ app.use(
   );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-const UsersRouter = require('./routes/users.js')
+const UsersRouter = require('./routes/Users.js')
 
 app.use('/users',UsersRouter)
 app.use('/uploads',express.static('uploads'))
