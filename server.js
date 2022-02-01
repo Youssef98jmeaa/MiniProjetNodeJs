@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost:27017/users")
+mongoose.connect("mongodb+srv://youssef:0000@cluster0.fv0jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
 db.once('open',()=>console.log('connected to database'))
